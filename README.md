@@ -1,6 +1,6 @@
-# kata-kit-starter
+# wicara-starter
 
-> Starter kit for developing React applications using kata-kit.
+> Starter kit for developing React applications using [Wicara](https://github.com/kata-ai/wicara).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Please read its documentation for more info on running this project locally.
 
