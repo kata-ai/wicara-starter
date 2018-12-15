@@ -14,16 +14,16 @@ import {
   SidebarAndContent,
   Sidebar,
   SidebarMain,
-  SidebarMainMenu,
-  SidebarSub
+  SidebarMainMenu
 } from '@kata-kit/layout';
 import Logo from './components/Logo';
 
 import * as sidebar from './sidebar';
 
-import HomeModule from '../home';
 import HomeSidebar from '../home/sidebar';
-import AboutModule from '../about';
+
+const HomeModule = React.lazy(() => import('../home'));
+const AboutModule = React.lazy(() => import('../about'));
 
 class App extends React.Component<RouteComponentProps> {
   public render() {
@@ -55,11 +55,13 @@ class App extends React.Component<RouteComponentProps> {
             )}
           </Sidebar>
           <Content>
-            <Switch>
-              <Route path="/first-demo" component={HomeModule} />
-              <Route path="/second-demo" component={AboutModule} />
-              <Route render={() => <Redirect to="/first-demo" />} />
-            </Switch>
+            <React.Suspense fallback={null}>
+              <Switch>
+                <Route path="/first-demo" component={HomeModule} />
+                <Route path="/second-demo" component={AboutModule} />
+                <Route render={() => <Redirect to="/first-demo" />} />
+              </Switch>
+            </React.Suspense>
           </Content>
         </SidebarAndContent>
       </Wrapper>
@@ -82,9 +84,6 @@ class App extends React.Component<RouteComponentProps> {
     switch (location) {
       case 'first-demo': {
         return <HomeSidebar />;
-      }
-      case 'second-demo': {
-        return <SidebarSub>SecondSidebar</SidebarSub>;
       }
       default: {
         return null;
