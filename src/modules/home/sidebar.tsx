@@ -5,11 +5,15 @@ import { withRouter, RouteComponentProps } from 'react-router';
 
 const HomeSidebar: React.SFC<RouteComponentProps> = ({ match }) => (
   <SidebarSub titleElement={<SidebarSubTitle>Sidebar</SidebarSubTitle>}>
-    <SidebarSubMenu exact to={`/first-demo/`}>
+    <SidebarSubMenu asNavLink exact to={`/first-demo/`} icon="bot">
       First Page
     </SidebarSubMenu>
-    <SidebarSubMenu to={`/first-demo/second`}>Second Page</SidebarSubMenu>
-    <SidebarSubMenu to={`/first-demo/third`}>Third Page</SidebarSubMenu>
+    <SidebarSubMenu asNavLink to={`/first-demo/second`} icon="nlu">
+      Second Page
+    </SidebarSubMenu>
+    <SidebarSubMenu asNavLink to={`/first-demo/third`} icon="cms">
+      Third Page
+    </SidebarSubMenu>
   </SidebarSub>
 );
 

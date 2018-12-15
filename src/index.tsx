@@ -6,7 +6,6 @@ import Main from './Main';
 
 import '@kata-kit/fonts/museo-sans-rounded.css';
 import '@kata-kit/fonts/kata-icons.css';
-import '@kata-kit/reset';
 
 ReactDOM.render(<Main />, document.getElementById('root'));
 

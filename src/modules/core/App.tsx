@@ -34,10 +34,11 @@ class App extends React.Component<RouteComponentProps> {
         <Topbar leftContent={<Logo />} />
         <SidebarAndContent hasTop>
           <Sidebar hasTop collapsed={this.isSidebarCollapsed()}>
-            <SidebarMain>
+            <SidebarMain hasTop>
               {Object.keys(sidebar.menus).map(menu => (
                 <React.Fragment key={menu}>
                   <SidebarMainMenu
+                    asNavLink
                     exact={sidebar.menus[menu].isExact}
                     to={sidebar.menus[menu].path}
                     icon={sidebar.menus[menu].icon}

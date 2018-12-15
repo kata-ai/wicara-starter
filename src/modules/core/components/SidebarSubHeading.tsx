@@ -20,8 +20,8 @@ const SidebarSubHeading: React.SFC<Props> = ({ children, className }) => (
 
 export default SidebarSubHeading;
 
-const H5 = styled<ThemeAttributes, 'h5'>('h5')`
+const H5 = styled('h5')`
   margin-top: ${variables.spaces.space2};
   padding: 6px 8px;
-  color: ${props => props.mutedTextColor} !important;
+  color: ${(props: ThemeAttributes) => props.mutedTextColor} !important;
 `;
