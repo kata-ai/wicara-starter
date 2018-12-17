@@ -58,7 +58,7 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
     const { open } = this.state;
 
     return (
-      <Dashboard title="First Page" tooltip="Homepage of the kata-kit demo">
+      <Dashboard title="First Page" tooltip="Homepage of the Wicara demo">
         <Board>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facillimum

@@ -102,7 +102,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
     const { open } = this.state;
 
     return (
-      <Dashboard title="Second Page" tooltip="Second page of the kata-kit demo">
+      <Dashboard title="Second Page" tooltip="Second page of the Wicara demo">
         <CardGrid>
           <Card asButton onClick={() => this.toggleDrawer()}>
             <CardButton label="Add Entry" icon="add" />
