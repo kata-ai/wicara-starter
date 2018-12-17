@@ -96,6 +96,14 @@
     "@kata-kit/theme" "^0.7.0-beta.0"
     polished "^2.3.1"
 
+"@kata-kit/card@^0.7.0-beta.1":
+  version "0.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@kata-kit/card/-/card-0.7.0-beta.1.tgz#2b563adf8f2c8fb37f1e72e4bd4697d4faa08f6c"
+  integrity sha512-jh0fqZqYwCALpsk5t/7YZgW4Uv6GSVNeuxqa19KchAtvj9y4Rb4PR6IVMO5N4rKOhqFxJPFtq3k6c9IWyot/9g==
+  dependencies:
+    "@kata-kit/theme" "^0.7.0-beta.0"
+    classnames "^2.2.6"
+
 "@kata-kit/common@^0.7.0-beta.0":
   version "0.7.0-beta.0"
   resolved "https://registry.yarnpkg.com/@kata-kit/common/-/common-0.7.0-beta.0.tgz#01e11a6523d71b06452c6a0b5c4b89ece5901087"
@@ -126,6 +134,17 @@
     classnames "^2.2.6"
     react-custom-scrollbars "^4.2.1"
 
+"@kata-kit/dropdown@^0.7.0-beta.0":
+  version "0.7.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@kata-kit/dropdown/-/dropdown-0.7.0-beta.0.tgz#5c4d28d277fadb8b04c4679958ab470113ac43c1"
+  integrity sha512-R7IvGb7N879gliG6MgaIdlX4mz4lnLSSjCG1YBX0/VS7hjA7/7G7yoZR+HsS5yOnAfOW3AuNiOmgr/X5YUSZGg==
+  dependencies:
+    "@kata-kit/button" "^0.7.0-beta.0"
+    "@kata-kit/loading" "^0.7.0-beta.0"
+    "@kata-kit/theme" "^0.7.0-beta.0"
+    classnames "^2.2.6"
+    lodash-es "^4.17.11"
+
 "@kata-kit/fonts@^0.7.0-beta.0":
   version "0.7.0-beta.0"
   resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.7.0-beta.0.tgz#ed860e73cc7aa907085aba96c70f65c4d1a51380"
@@ -135,6 +154,16 @@
   version "0.7.0-beta.1"
   resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.1.tgz#d320c0a5a5778b28a0c52e53e2bfabb172a99435"
   integrity sha512-9EOh1nKMzjUL+D9hkXnUEQsy4W8Zw4sWo0vkN7Dkk5lK83Cgj9xHUAGi4WDTl3boFkEKJTQWj6zZDx45qqLB3w==
+  dependencies:
+    "@kata-kit/theme" "^0.7.0-beta.0"
+    classnames "^2.2.6"
+    polished "^2.3.1"
+    react-custom-scrollbars "^4.2.1"
+
+"@kata-kit/layout@^0.7.0-beta.2":
+  version "0.7.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.2.tgz#57e5b1a8c2c4b767981f8ceb0a288808f8757e8f"
+  integrity sha512-kPyIaReTZuGkgpj0XPxVuocJnGTdgSb8DF5v2gNjyjXq6RFMAUQJ00/Gy6KFDZQVuEveCa89cVg17YgIxeKGhA==
   dependencies:
     "@kata-kit/theme" "^0.7.0-beta.0"
     classnames "^2.2.6"

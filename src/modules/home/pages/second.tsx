@@ -2,13 +2,19 @@ import * as React from 'react';
 
 import { Button } from '@kata-kit/button';
 import { Dashboard } from '@kata-kit/dashboard';
-import { Board } from '@kata-kit/common';
 import {
   Drawer,
   DrawerHeader,
   DrawerBody,
   DrawerFooter
 } from '@kata-kit/drawer';
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from '@kata-kit/dropdown';
+import { CardGrid, Card, CardButton } from '@kata-kit/card';
 
 interface HomeSecondPageState {
   open: boolean;
@@ -44,22 +50,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
               Have some music.
             </a>
           </p>
-        </DrawerBody>
-        <DrawerFooter>
-          <Button color="primary" onClick={() => this.toggleDrawer()}>
-            Close drawer
-          </Button>
-        </DrawerFooter>
-      </>
-    );
-  }
 
-  public render() {
-    const { open } = this.state;
-
-    return (
-      <Dashboard title="Second Page" tooltip="Second page of the kata-kit demo">
-        <Board>
           <p>
             <a
               href="https://www.youtube.com/watch?v=mUGDxyG1kOI"
@@ -76,14 +67,6 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
             verum etiam praepotentem, ut M.{' '}
             <i>Tibi hoc incredibile, quod beatissimum.</i>{' '}
           </p>
-
-          <h2>Test image follows.</h2>
-
-          <img
-            style={{ marginBottom: '1rem', maxWidth: '100%' }}
-            src="https://picsum.photos/1280/720?random"
-            alt="Randomly-generated placeholder image from picsum.photos"
-          />
 
           <p>
             Quis animo aequo videt eum, quem inpure ac flagitiose putet vivere?
@@ -105,15 +88,54 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
             <b>Frater et T.</b> Ergo id est convenienter naturae vivere, a
             natura discedere. Si quae forte-possumus.{' '}
           </p>
-
+        </DrawerBody>
+        <DrawerFooter>
           <Button color="primary" onClick={() => this.toggleDrawer()}>
-            Open drawer
+            Close drawer
           </Button>
+        </DrawerFooter>
+      </>
+    );
+  }
 
-          <Drawer isOpen={open} onClose={() => this.toggleDrawer()}>
-            {this.renderInner()}
-          </Drawer>
-        </Board>
+  public render() {
+    const { open } = this.state;
+
+    return (
+      <Dashboard title="Second Page" tooltip="Second page of the kata-kit demo">
+        <CardGrid>
+          <Card asButton onClick={() => this.toggleDrawer()}>
+            <CardButton label="Add Entry" icon="add" />
+          </Card>
+          <Card
+            title="Second Card"
+            action={
+              <Dropdown>
+                <DropdownToggle caret={false}>
+                  <Button isIcon>
+                    <i className="icon-more" />
+                  </Button>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Update</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            }
+          >
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </Card>
+          <Card title="Third Card">
+            It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.
+          </Card>
+        </CardGrid>
+
+        <Drawer isOpen={open} onClose={() => this.toggleDrawer()}>
+          {this.renderInner()}
+        </Drawer>
       </Dashboard>
     );
   }
