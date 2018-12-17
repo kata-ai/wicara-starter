@@ -134,10 +134,10 @@
     classnames "^2.2.6"
     react-custom-scrollbars "^4.2.1"
 
-"@kata-kit/dropdown@^0.7.0-beta.0":
-  version "0.7.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@kata-kit/dropdown/-/dropdown-0.7.0-beta.0.tgz#5c4d28d277fadb8b04c4679958ab470113ac43c1"
-  integrity sha512-R7IvGb7N879gliG6MgaIdlX4mz4lnLSSjCG1YBX0/VS7hjA7/7G7yoZR+HsS5yOnAfOW3AuNiOmgr/X5YUSZGg==
+"@kata-kit/dropdown@^0.7.0-beta.1":
+  version "0.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@kata-kit/dropdown/-/dropdown-0.7.0-beta.1.tgz#8d192c0366474cc59eb5ba094204eaefe3d89031"
+  integrity sha512-Tfxwaw0Pg82KGPVGRRt+GREVVxiZUYEifM7+xSC/fi64wAC+BNNBfmz7zmd8A3G5XMPQPkeD2rOszZ7Si32Xrw==
   dependencies:
     "@kata-kit/button" "^0.7.0-beta.0"
     "@kata-kit/loading" "^0.7.0-beta.0"

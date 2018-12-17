@@ -116,7 +116,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
                     <i className="icon-more" />
                   </Button>
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu floatRight>
                   <DropdownItem>Update</DropdownItem>
                   <DropdownItem>Delete</DropdownItem>
                 </DropdownMenu>
