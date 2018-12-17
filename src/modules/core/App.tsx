@@ -4,8 +4,9 @@ import {
   Route,
   RouteComponentProps,
   withRouter,
-  Redirect
-} from 'react-router';
+  Redirect,
+  NavLink
+} from 'react-router-dom';
 
 import {
   Wrapper,
@@ -31,7 +32,13 @@ class App extends React.Component<RouteComponentProps> {
 
     return (
       <Wrapper>
-        <Topbar leftContent={<Logo />} />
+        <Topbar
+          leftContent={
+            <NavLink exact to="/">
+              <Logo />
+            </NavLink>
+          }
+        />
         <SidebarAndContent hasTop>
           <Sidebar hasTop collapsed={this.isSidebarCollapsed()}>
             <SidebarMain hasTop>
