@@ -96,10 +96,10 @@
     "@kata-kit/theme" "^0.7.0-beta.0"
     polished "^2.3.1"
 
-"@kata-kit/card@^0.7.0-beta.1":
-  version "0.7.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@kata-kit/card/-/card-0.7.0-beta.1.tgz#2b563adf8f2c8fb37f1e72e4bd4697d4faa08f6c"
-  integrity sha512-jh0fqZqYwCALpsk5t/7YZgW4Uv6GSVNeuxqa19KchAtvj9y4Rb4PR6IVMO5N4rKOhqFxJPFtq3k6c9IWyot/9g==
+"@kata-kit/card@^0.7.0-beta.2":
+  version "0.7.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@kata-kit/card/-/card-0.7.0-beta.2.tgz#93067bdd2ed1467ee2a59e69f9a12be1cb611fc9"
+  integrity sha512-AVqAB/ztPBypz6ue+5JFJMqvuqjhzL12tdge7t2gQawDAysT2Bj+ApSoQ1aaTOY338pxDUTHrYBXtpLUnQZ6vw==
   dependencies:
     "@kata-kit/theme" "^0.7.0-beta.0"
     classnames "^2.2.6"
@@ -113,12 +113,12 @@
     classnames "^2.2.6"
     focus-trap "^3.0.0"
 
-"@kata-kit/dashboard@^0.7.0-beta.1":
-  version "0.7.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@kata-kit/dashboard/-/dashboard-0.7.0-beta.1.tgz#27cf240f734e14ac9919392e262a1e1c9be636f2"
-  integrity sha512-HaKMSYQnU+UUA9gKAyQkz69JsRC2L176WCRTaKbOBwoiU2XhDT9kb5Uj5O/ZdJUVWI3LjSJvlOMibTCd7yIZFw==
+"@kata-kit/dashboard@^0.7.0-beta.3":
+  version "0.7.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@kata-kit/dashboard/-/dashboard-0.7.0-beta.3.tgz#b4dfcf40adb7802cdb6b16b45e09ace5d01fff3f"
+  integrity sha512-MOHyOOzrbWgXDNY0v3VYf1hggkFfvUvfZ9X1ULvujpNXa2ZJ4AjFaY9LvL/YwondnOsMNOM1qb1FvC4sQkQ5jQ==
   dependencies:
-    "@kata-kit/layout" "^0.7.0-beta.1"
+    "@kata-kit/layout" "^0.7.0-beta.3"
     "@kata-kit/theme" "^0.7.0-beta.0"
     "@kata-kit/tooltip" "^0.7.0-beta.0"
     classnames "^2.2.6"
@@ -150,20 +150,10 @@
   resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.7.0-beta.1.tgz#081e26bbb36522ecfa661fd8d5543b734f887d8c"
   integrity sha512-PQlbFi27iYi09GsmbNK96NbumArjo5AFTT/Hp8aF+RVbcz2NH47Vc9L89QpDgvBy06p84jd1rGLwdDy4+kC31w==
 
-"@kata-kit/layout@^0.7.0-beta.1":
-  version "0.7.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.1.tgz#d320c0a5a5778b28a0c52e53e2bfabb172a99435"
-  integrity sha512-9EOh1nKMzjUL+D9hkXnUEQsy4W8Zw4sWo0vkN7Dkk5lK83Cgj9xHUAGi4WDTl3boFkEKJTQWj6zZDx45qqLB3w==
-  dependencies:
-    "@kata-kit/theme" "^0.7.0-beta.0"
-    classnames "^2.2.6"
-    polished "^2.3.1"
-    react-custom-scrollbars "^4.2.1"
-
-"@kata-kit/layout@^0.7.0-beta.2":
-  version "0.7.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.2.tgz#57e5b1a8c2c4b767981f8ceb0a288808f8757e8f"
-  integrity sha512-kPyIaReTZuGkgpj0XPxVuocJnGTdgSb8DF5v2gNjyjXq6RFMAUQJ00/Gy6KFDZQVuEveCa89cVg17YgIxeKGhA==
+"@kata-kit/layout@^0.7.0-beta.3":
+  version "0.7.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.3.tgz#037eb2d4b41dd994502b8aae6873b4bb636160ec"
+  integrity sha512-NWez2mtBXEnPZa3nTnwox2FJVait0k2uelV3Zy/NtP9BDZ+BjRD2f1E0yzVCClRe83WO4ZlQ+o5bcySS9mxMjg==
   dependencies:
     "@kata-kit/theme" "^0.7.0-beta.0"
     classnames "^2.2.6"
