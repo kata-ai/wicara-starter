@@ -16,12 +16,13 @@ import {
   SidebarMain,
   SidebarMainMenu
 } from '@kata-kit/layout';
+import { Robot } from '@kata-kit/loading';
+
 import Logo from './components/Logo';
+import Selector from './components/Selector';
 
 import * as sidebar from './sidebar';
-
 import HomeSidebar from '../home/sidebar';
-import Selector from './components/Selector';
 
 const HomeModule = React.lazy(() => import('../home'));
 const AboutModule = React.lazy(() => import('../about'));
@@ -58,7 +59,7 @@ class App extends React.Component<RouteComponentProps> {
             )}
           </Sidebar>
           <Content>
-            <React.Suspense fallback={null}>
+            <React.Suspense fallback={<Robot />}>
               <Switch>
                 <Route path="/first-demo" component={HomeModule} />
                 <Route path="/second-demo" component={AboutModule} />
