@@ -32,7 +32,9 @@ class App extends React.Component<RouteComponentProps> {
 
     return (
       <Wrapper>
-        <Topbar logoContent={<Logo />} leftContent={<Selector />} />
+        <Topbar logoContent={<Logo />} leftContent={<Selector />}>
+          TopbarRight
+        </Topbar>
         <SidebarAndContent hasTop>
           <Sidebar hasTop collapsed={this.isSidebarCollapsed()}>
             <SidebarMain hasTop>

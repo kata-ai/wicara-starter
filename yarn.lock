@@ -113,12 +113,12 @@
     classnames "^2.2.6"
     focus-trap "^3.0.0"
 
-"@kata-kit/dashboard@^0.7.0-beta.3":
-  version "0.7.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@kata-kit/dashboard/-/dashboard-0.7.0-beta.3.tgz#b4dfcf40adb7802cdb6b16b45e09ace5d01fff3f"
-  integrity sha512-MOHyOOzrbWgXDNY0v3VYf1hggkFfvUvfZ9X1ULvujpNXa2ZJ4AjFaY9LvL/YwondnOsMNOM1qb1FvC4sQkQ5jQ==
+"@kata-kit/dashboard@^0.7.0-beta.4":
+  version "0.7.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@kata-kit/dashboard/-/dashboard-0.7.0-beta.4.tgz#cfac23d89cf53fc9b5e7cc34a6908c7af79413ec"
+  integrity sha512-keyek8CYafAiJ8nPg/wmLvmPf//LiYJLYQ/zAoi33kv5vclto9pcTe3Jsd84YgSYc3gR6zyk5nH+Nk2AmYKbKg==
   dependencies:
-    "@kata-kit/layout" "^0.7.0-beta.3"
+    "@kata-kit/layout" "^0.7.0-beta.4"
     "@kata-kit/theme" "^0.7.0-beta.0"
     "@kata-kit/tooltip" "^0.7.0-beta.0"
     classnames "^2.2.6"
@@ -150,10 +150,10 @@
   resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.7.0-beta.1.tgz#081e26bbb36522ecfa661fd8d5543b734f887d8c"
   integrity sha512-PQlbFi27iYi09GsmbNK96NbumArjo5AFTT/Hp8aF+RVbcz2NH47Vc9L89QpDgvBy06p84jd1rGLwdDy4+kC31w==
 
-"@kata-kit/layout@^0.7.0-beta.3":
-  version "0.7.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.3.tgz#037eb2d4b41dd994502b8aae6873b4bb636160ec"
-  integrity sha512-NWez2mtBXEnPZa3nTnwox2FJVait0k2uelV3Zy/NtP9BDZ+BjRD2f1E0yzVCClRe83WO4ZlQ+o5bcySS9mxMjg==
+"@kata-kit/layout@^0.7.0-beta.4":
+  version "0.7.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@kata-kit/layout/-/layout-0.7.0-beta.4.tgz#8d1b8ea57146801901a74e241ebbeb9c3b190e6a"
+  integrity sha512-qyxgJYQzwG5kq7swOxtzbFs7X/3cqVLoZenRkRBEJ5OJErWQJ4dCzkesA3F+po9JHGPrzsnAZTN1Kvv+WPGj0w==
   dependencies:
     "@kata-kit/theme" "^0.7.0-beta.0"
     classnames "^2.2.6"
