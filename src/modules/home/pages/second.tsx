@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Button } from '@kata-kit/button';
-import { Dashboard } from '@kata-kit/dashboard';
+import { Dashboard, DashboardCards } from '@kata-kit/dashboard';
 import {
   Drawer,
   DrawerHeader,
@@ -14,7 +14,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from '@kata-kit/dropdown';
-import { CardGrid, Card, CardButton } from '@kata-kit/card';
+import { Card, CardButton } from '@kata-kit/card';
 
 interface HomeSecondPageState {
   open: boolean;
@@ -103,7 +103,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
 
     return (
       <Dashboard title="Second Page" tooltip="Second page of the Wicara demo">
-        <CardGrid>
+        <DashboardCards>
           <Card asButton onClick={() => this.toggleDrawer()}>
             <CardButton label="Add Entry" icon="add" />
           </Card>
@@ -131,7 +131,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
             It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged.
           </Card>
-        </CardGrid>
+        </DashboardCards>
 
         <Drawer isOpen={open} onClose={() => this.toggleDrawer()}>
           {this.renderInner()}
