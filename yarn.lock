@@ -145,10 +145,10 @@
     classnames "^2.2.6"
     lodash-es "^4.17.11"
 
-"@kata-kit/fonts@^0.7.0-beta.0":
-  version "0.7.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.7.0-beta.0.tgz#ed860e73cc7aa907085aba96c70f65c4d1a51380"
-  integrity sha512-mA2nRDQzWS10TlONsqzO0RhnWF+EGba0NJK7689O4TZDn/GvLtaCBdGr/XdSk9gKXq33DxBZzSRhKK34AlXwJg==
+"@kata-kit/fonts@^0.7.0-beta.1":
+  version "0.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.7.0-beta.1.tgz#081e26bbb36522ecfa661fd8d5543b734f887d8c"
+  integrity sha512-PQlbFi27iYi09GsmbNK96NbumArjo5AFTT/Hp8aF+RVbcz2NH47Vc9L89QpDgvBy06p84jd1rGLwdDy4+kC31w==
 
 "@kata-kit/layout@^0.7.0-beta.1":
   version "0.7.0-beta.1"
