@@ -4,8 +4,7 @@ import {
   Route,
   RouteComponentProps,
   withRouter,
-  Redirect,
-  NavLink
+  Redirect
 } from 'react-router-dom';
 
 import {
@@ -22,6 +21,7 @@ import Logo from './components/Logo';
 import * as sidebar from './sidebar';
 
 import HomeSidebar from '../home/sidebar';
+import Selector from './components/Selector';
 
 const HomeModule = React.lazy(() => import('../home'));
 const AboutModule = React.lazy(() => import('../about'));
@@ -32,13 +32,7 @@ class App extends React.Component<RouteComponentProps> {
 
     return (
       <Wrapper>
-        <Topbar
-          leftContent={
-            <NavLink exact to="/">
-              <Logo />
-            </NavLink>
-          }
-        />
+        <Topbar logoContent={<Logo />} leftContent={<Selector />} />
         <SidebarAndContent hasTop>
           <Sidebar hasTop collapsed={this.isSidebarCollapsed()}>
             <SidebarMain hasTop>

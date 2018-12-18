@@ -2,29 +2,21 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-interface LogoProps {
-  hasLink?: boolean;
-}
-
-const Logo: React.SFC<LogoProps> = ({ hasLink }) => {
-  if (hasLink) {
-    return (
-      <NavLink to="/" exact className="kata-logo">
-        <Root>
-          <img src={require('../../../assets/images/logo.svg')} />
-        </Root>
-      </NavLink>
-    );
-  }
-
+const Logo: React.SFC = () => {
   return (
-    <Root>
-      <img src={require('../../../assets/images/logo.svg')} />
-    </Root>
+    <StyledNavLink exact to="/">
+      <Root>
+        <img src={require('../../../assets/images/logo.svg')} />
+      </Root>
+    </StyledNavLink>
   );
 };
 
 export default Logo;
+
+const StyledNavLink = styled(NavLink)`
+  display: inline-block;
+`;
 
 const Root = styled('div')`
   width: 64px;
