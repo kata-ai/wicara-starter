@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jpavon/react-scripts-ts": "0.11.0",
     "@kata-kit/button": "^0.7.0-beta.0",
     "@kata-kit/card": "^0.7.0-beta.2",
     "@kata-kit/common": "^0.7.0-beta.0",
@@ -20,7 +21,6 @@
     "react-dom": "^16.6.3",
     "react-hot-loader": "^4.6.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts-ts": "3.1.0",
     "styled-components": "^4.1.2"
   },
   "scripts": {
@@ -47,5 +47,11 @@
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.2.2",
     "typescript-styled-plugin": "^0.13.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
