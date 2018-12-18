@@ -1019,10 +1019,10 @@
     "@kata-kit/theme" "^0.7.0-beta.0"
     polished "^2.3.1"
 
-"@kata-kit/card@^0.7.0-beta.2":
-  version "0.7.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@kata-kit/card/-/card-0.7.0-beta.2.tgz#93067bdd2ed1467ee2a59e69f9a12be1cb611fc9"
-  integrity sha512-AVqAB/ztPBypz6ue+5JFJMqvuqjhzL12tdge7t2gQawDAysT2Bj+ApSoQ1aaTOY338pxDUTHrYBXtpLUnQZ6vw==
+"@kata-kit/card@^0.7.0-beta.3":
+  version "0.7.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@kata-kit/card/-/card-0.7.0-beta.3.tgz#aa57c720fd579982989f89afaf3ef71cd19921d1"
+  integrity sha512-UrrhPG2It+we3Ub3YUiHJwyoclefUIAwwj+cZCk53nabh96d5nvE5TwQ8752zrxaZtVL/VKMzXHwAp9saxJd1A==
   dependencies:
     "@kata-kit/theme" "^0.7.0-beta.0"
     classnames "^2.2.6"
