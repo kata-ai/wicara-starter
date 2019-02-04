@@ -1,4 +1,6 @@
-const menus = {
+import { SidebarMainMenu } from '~/interfaces/types';
+
+const menus: Record<string, SidebarMainMenu> = {
   first: {
     title: 'Home',
     path: '/first-demo',

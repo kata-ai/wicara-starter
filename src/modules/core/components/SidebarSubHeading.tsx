@@ -8,7 +8,7 @@ interface Props {
   className?: string;
 }
 
-const SidebarSubHeading: React.SFC<Props> = ({ children, className }) => (
+const SidebarSubHeading: React.FC<Props> = ({ children, className }) => (
   <Theme values={themes.sidebarSubHeading}>
     {themeAttributes => (
       <H5 className={className} {...themeAttributes}>

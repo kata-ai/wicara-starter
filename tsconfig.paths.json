@@ -1,0 +1,12 @@
+// This file exists solely because CRA 2.1 overwrites our base tsconfig every
+// time we run `npm start`. Always define paths in this file!
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      // Define absolute imports path mappings.
+      // Don't forget to add these to `resolve.alias` on `craco.config.js`.
+      "~/*": ["src/*"]
+    }
+  }
+}

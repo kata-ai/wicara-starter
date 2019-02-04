@@ -6,7 +6,7 @@ import { KataReset } from '@kata-kit/reset';
 
 import App from './modules/core/App';
 
-const Main: React.SFC = () => (
+const Main: React.FC = () => (
   <BrowserRouter>
     <KataReset>
       <App />
