@@ -28,7 +28,7 @@
     "build": "rescripts build",
     "test": "rescripts test",
     "lint": "tslint -p tsconfig.json 'src/**/*.{ts,tsx}'",
-    "now-build": "yarn build && mv build dist"
+    "now-build": "yarn build"
   },
   "devDependencies": {
     "@rescripts/cli": "^0.0.10",
