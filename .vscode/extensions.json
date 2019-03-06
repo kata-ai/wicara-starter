@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "EditorConfig.EditorConfig",
-    "eg2.tslint",
+    "ms-vscode.vscode-typescript-tslint-plugin",
     "esbenp.prettier-vscode",
     "jpoissonnier.vscode-styled-components"
   ]
