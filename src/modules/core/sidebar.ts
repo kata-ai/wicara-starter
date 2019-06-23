@@ -9,7 +9,7 @@ const menus: Record<string, SidebarMainMenu> = {
   second: {
     title: 'About',
     path: '/second-demo',
-    icon: 'dict'
+    icon: 'dictionary'
   }
 };
 
