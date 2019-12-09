@@ -1,36 +1,32 @@
-const reactHotReloadPlugin = require('craco-plugin-react-hot-reload');
-const { paths } = require('@craco/craco');
-
 module.exports = {
-  plugins: [
-    {
-      plugin: reactHotReloadPlugin
-    }
-  ],
   webpack: {
-    alias: {
-      '~': `${paths.appSrc}/`
+    configure: (config, { env, paths }) => {
+      // Add `webpack-bundle-analyzer` if `ANALYZE` env is set.
+      if (env === 'production' && process.env.ANALYZE) {
+        config.plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            reportFilename: path.join(
+              __dirname,
+              '../webpack-bundle-analyzer/report.html'
+            )
+          })
+        );
+      }
+
+      // Setup proper chunk path names for production
+      if (env === 'production') {
+        config.optimization.splitChunks.name = true;
+      }
+
+      return config;
     }
   },
-  jest: {
-    configure: {
-      moduleNameMapper: {
-        '^~(.*)$': '<rootDir>/src/assets$1'
-      }
-    }
+  eslint: {
+    // We still use tslint, so disable this for now.
+    enable: false
   },
   babel: {
-    plugins: [
-      'babel-plugin-styled-components',
-      [
-        'module-resolver',
-        {
-          root: '.',
-          alias: {
-            '~': './src'
-          }
-        }
-      ]
-    ]
+    plugins: ['babel-plugin-styled-components']
   }
 };

@@ -1,27 +1,14 @@
 import * as React from 'react';
-import styled from 'styled-components';
-
-import { Theme, ThemeAttributes, variables } from '@kata-kit/theme';
-import themes from '../theme';
+import { Heading } from '@wicara/core';
 
 interface Props {
   className?: string;
 }
 
 const SidebarSubHeading: React.FC<Props> = ({ children, className }) => (
-  <Theme values={themes.sidebarSubHeading}>
-    {themeAttributes => (
-      <H5 className={className} {...themeAttributes}>
-        {children}
-      </H5>
-    )}
-  </Theme>
+  <Heading as="h5" scale="heading5" color="gray50" m={0} className={className}>
+    {children}
+  </Heading>
 );
 
 export default SidebarSubHeading;
-
-const H5 = styled('h5')`
-  margin-top: ${variables.spaces.space2};
-  padding: 6px 8px;
-  color: ${(props: ThemeAttributes) => props.mutedTextColor} !important;
-`;

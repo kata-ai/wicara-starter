@@ -1,9 +1,7 @@
 import * as React from 'react';
+import { Button, Card, Dialog, Box, Heading, Paragraph } from '@wicara/core';
 
-import { Button } from '@kata-kit/button';
-import { Dashboard } from '@kata-kit/dashboard';
-import { Board } from '@kata-kit/common';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from '@kata-kit/modal';
+import { Dashboard } from '../../../components/dashboard';
 
 interface HomeFirstPageState {
   open: boolean;
@@ -27,9 +25,13 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
   renderInner() {
     return (
       <>
-        <ModalHeader title="Modal Title" />
-        <ModalBody>
-          <p>
+        <Box alignItems="center" display="flex" mx="lg" my="md">
+          <Heading id="stories-title" lineHeight="32px" m={0} scale="heading3">
+            Dialog Title
+          </Heading>
+        </Box>
+        <Box mb="lg" mx="lg">
+          <Paragraph>
             Congratulations! You have opened this modal.{' '}
             <a
               href="https://www.youtube.com/watch?v=ctSYCoMF4z4"
@@ -38,18 +40,13 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
             >
               Have some music.
             </a>
-          </p>
+          </Paragraph>
           <img
             style={{ marginBottom: '1rem', maxWidth: '100%' }}
             src="https://picsum.photos/1280/720/?random"
             alt="Randomly-generated placeholder image from picsum.photos"
           />
-        </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={() => this.toggleDrawer()}>
-            Close modal
-          </Button>
-        </ModalFooter>
+        </Box>
       </>
     );
   }
@@ -58,16 +55,24 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
     const { open } = this.state;
 
     return (
-      <Dashboard title="First Page" tooltip="Homepage of the Wicara demo">
-        <Board>
-          <p>
+      <Dashboard
+        title="First Page"
+        tooltip="First page of the Wicara demo"
+        floatingElements={
+          <Button variant="primary" onClick={() => this.toggleDrawer()}>
+            Open dialog
+          </Button>
+        }
+      >
+        <Card bg="white" borderRadius="md" boxShadow="layer100" padding="md">
+          <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facillimum
             id quidem est, inquam. Ita multa dicunt, quae vix intellegam. Hic
             Speusippus, hic Xenocrates, hic eius auditor Polemo, cuius illa ipsa
             sessio fuit, quam videmus.{' '}
-          </p>
+          </Paragraph>
 
-          <p>
+          <Paragraph>
             Illa videamus, quae a te de amicitia dicta sunt. Totum autem id
             externum est, et quod externum, id in casu est. Equidem etiam
             Epicurum, in physicis quidem, Democriteum puto. Tollitur beneficium,
@@ -84,9 +89,9 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
               Quid est? Tollenda est atque extrahenda radicitus
             </a>
             .{' '}
-          </p>
+          </Paragraph>
 
-          <p>
+          <Paragraph mb={0}>
             Duo Reges: constructio interrete. Sed nimis multa. Cuius ad naturam
             apta ratio vera illa et summa lex a philosophis dicitur. Bona autem
             corporis huic sunt, quod posterius posui, similiora. Nondum autem
@@ -100,16 +105,12 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
               Aristonem eorumve similes
             </a>
             , quos tu non probas?{' '}
-          </p>
+          </Paragraph>
 
-          <Button color="primary" onClick={() => this.toggleDrawer()}>
-            Open modal
-          </Button>
-
-          <Modal show={open} onClose={() => this.toggleDrawer()}>
+          <Dialog isOpen={open} onClose={() => this.toggleDrawer()}>
             {this.renderInner()}
-          </Modal>
-        </Board>
+          </Dialog>
+        </Card>
       </Dashboard>
     );
   }

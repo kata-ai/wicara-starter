@@ -1,29 +1,29 @@
 import * as React from 'react';
+import { Card, Paragraph } from '@wicara/core';
 
-import { Dashboard } from '@kata-kit/dashboard';
-import { Board } from '@kata-kit/common';
+import { Dashboard } from '../../../components/dashboard';
 
 const HomeThirdPage = () => (
   <Dashboard title="Third Page">
-    <Board>
-      <p>
+    <Card bg="white" borderRadius="md" boxShadow="layer100" padding="md">
+      <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges:
         constructio interrete. Non enim solum Torquatus dixit quid sentiret, sed
         etiam cur. Ut in geometria, prima si dederis, danda sunt omnia. An eum
         discere ea mavis, quae cum plane perdidiceriti nihil sciat?{' '}
-      </p>
+      </Paragraph>
 
-      <p>
+      <Paragraph>
         Huius ego nunc auctoritatem sequens idem faciam. Hic Speusippus, hic
         Xenocrates, hic eius auditor Polemo, cuius illa ipsa sessio fuit, quam
         videmus. At iste non dolendi status non vocatur voluptas. Videamus animi
         partes, quarum est conspectus illustrior;{' '}
-      </p>
+      </Paragraph>
 
-      <p>
+      <Paragraph>
         Quid ait Aristoteles reliquique Platonis alumni? Omnis enim est natura
         diligens sui. <strong>Test embed follows.</strong>{' '}
-      </p>
+      </Paragraph>
 
       <iframe
         width="560"
@@ -33,7 +33,7 @@ const HomeThirdPage = () => (
         allow="autoplay; encrypted-media"
         allowFullScreen
       />
-    </Board>
+    </Card>
   </Dashboard>
 );
 

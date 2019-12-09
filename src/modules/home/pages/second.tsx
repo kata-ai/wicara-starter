@@ -1,20 +1,36 @@
 import * as React from 'react';
+import styled from 'styled-components';
+import {
+  Button,
+  Box,
+  UnstyledAnchor,
+  Card,
+  Heading,
+  Paragraph,
+  SideSheet,
+  shadows
+} from '@wicara/core';
 
-import { Button } from '@kata-kit/button';
-import { Dashboard, DashboardCards } from '@kata-kit/dashboard';
-import {
-  Drawer,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter
-} from '@kata-kit/drawer';
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from '@kata-kit/dropdown';
-import { Card, CardButton } from '@kata-kit/card';
+import { Dashboard } from '../../../components/dashboard';
+
+const Anchor = styled(UnstyledAnchor)`
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 33.3%;
+  margin: 8px;
+
+  ${Card} {
+    box-shadow: ${shadows.layer100};
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    ${Card} {
+      box-shadow: ${shadows.layer200};
+    }
+  }
+`;
 
 interface HomeSecondPageState {
   open: boolean;
@@ -27,6 +43,7 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
     this.state = {
       open: false
     };
+    this.toggleDrawer = this.toggleDrawer.bind(this);
   }
 
   toggleDrawer() {
@@ -38,8 +55,12 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
   renderInner() {
     return (
       <>
-        <DrawerHeader title="Drawer Title" />
-        <DrawerBody>
+        <Box alignItems="center" display="flex" mx={48} my={26}>
+          <Heading id="stories-title" lineHeight="32px" m={0} scale="heading3">
+            Side Sheet Title
+          </Heading>
+        </Box>
+        <Box flex={1} mx={48} my={26}>
           <p>
             Congratulations! You have opened this drawer.{' '}
             <a
@@ -88,12 +109,12 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
             <b>Frater et T.</b> Ergo id est convenienter naturae vivere, a
             natura discedere. Si quae forte-possumus.{' '}
           </p>
-        </DrawerBody>
-        <DrawerFooter>
+        </Box>
+        <Box alignItems="center" display="flex" mx={48} my={26}>
           <Button color="primary" onClick={() => this.toggleDrawer()}>
-            Close drawer
+            Close Side Sheet
           </Button>
-        </DrawerFooter>
+        </Box>
       </>
     );
   }
@@ -102,40 +123,72 @@ class HomeSecondPage extends React.Component<{}, HomeSecondPageState> {
     const { open } = this.state;
 
     return (
-      <Dashboard title="Second Page" tooltip="Second page of the Wicara demo">
-        <DashboardCards>
-          <Card asButton onClick={() => this.toggleDrawer()}>
-            <CardButton label="Add Entry" icon="add" />
-          </Card>
-          <Card
-            title="Second Card"
-            action={
-              <Dropdown>
-                <DropdownToggle caret={false}>
-                  <Button isIcon>
-                    <i className="icon-more" />
-                  </Button>
-                </DropdownToggle>
-                <DropdownMenu floatRight>
-                  <DropdownItem>Update</DropdownItem>
-                  <DropdownItem>Delete</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            }
+      <Dashboard
+        title="Second Page"
+        tooltip="Second page of the Wicara demo"
+        floatingElements={
+          <Button variant="primary" onClick={this.toggleDrawer}>
+            Open Side Sheet
+          </Button>
+        }
+      >
+        <Box display="flex" flexWrap="wrap" position="relative" mx={-8}>
+          <Anchor
+            href="https://www.youtube.com/watch?v=S38sf1zi_Fk"
+            target="_blank"
           >
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </Card>
-          <Card title="Third Card">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.
-          </Card>
-        </DashboardCards>
+            <Card
+              bg="white"
+              borderRadius="md"
+              display="flex"
+              flex={1}
+              flexDirection="column"
+            >
+              <img
+                alt="Example image"
+                src="https://picsum.photos/id/873/1072/708"
+                style={{
+                  height: 248,
+                  objectFit: 'cover',
+                  width: '100%'
+                }}
+              />
+              <Box flex="1 1 auto" padding="sm">
+                <Heading scale="heading3">An Example Card</Heading>
+                <Paragraph marginBottom={0} marginTop="xs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi omnis, reiciendis doloremque quisquam sequi vel eaque
+                  aperiam vitae. Click for a surprise.
+                </Paragraph>
+              </Box>
+            </Card>
+          </Anchor>
+          <Anchor
+            href="https://www.youtube.com/watch?v=ctSYCoMF4z4"
+            target="_blank"
+          >
+            <Card
+              bg="white"
+              borderRadius="md"
+              display="flex"
+              flex={1}
+              flexDirection="column"
+            >
+              <Box flex="1 1 auto" padding="sm">
+                <Heading scale="heading3">An Example Card</Heading>
+                <Paragraph marginBottom={0} marginTop="xs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi omnis, reiciendis doloremque quisquam sequi vel eaque
+                  aperiam vitae. Click for a surprise.
+                </Paragraph>
+              </Box>
+            </Card>
+          </Anchor>
+        </Box>
 
-        <Drawer isOpen={open} onClose={() => this.toggleDrawer()}>
+        <SideSheet isOpen={open} onClose={() => this.toggleDrawer()}>
           {this.renderInner()}
-        </Drawer>
+        </SideSheet>
       </Dashboard>
     );
   }

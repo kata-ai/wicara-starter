@@ -4,8 +4,8 @@ import * as ReactDOM from 'react-dom';
 import * as serviceWorker from './utils/serviceWorker';
 import Main from './Main';
 
-import '@kata-kit/fonts/museo-sans-rounded.css';
-import '@kata-kit/fonts/kata-icons.css';
+import '@wicara/fonts/museo-sans-rounded.css';
+import '@wicara/fonts/kata-icons.css';
 
 ReactDOM.render(<Main />, document.getElementById('root'));
 
