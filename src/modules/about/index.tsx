@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { Card, Paragraph } from '@wicara/core';
 
-import { Dashboard } from '@kata-kit/dashboard';
-import { Board } from '@kata-kit/common';
+import { Dashboard } from '../../components/dashboard';
 
 const AboutModule = () => (
-  <Dashboard title="About">
-    <Board>
-      <p>
+  <Dashboard title="Third Page">
+    <Card bg="white" borderRadius="md" boxShadow="layer100" padding="md">
+      <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod autem
         satis est, eo quicquid accessit, nimium est; Pauca mutat vel plura sane;
         Quae diligentissime contra Aristonem dicuntur a Chryippo.{' '}
@@ -19,9 +19,9 @@ const AboutModule = () => (
         </a>{' '}
         <b>Minime vero, inquit ille, consentit.</b>{' '}
         <b>Odium autem et invidiam facile vitabis.</b>{' '}
-      </p>
+      </Paragraph>
 
-      <p>
+      <Paragraph>
         Quis istud possit, inquit, negare? Bonum integritas corporis: misera
         debilitas. Itaque rursus eadem ratione, qua sum paulo ante usus,
         haerebitis. Nec vero sum nescius esse utilitatem in historia, non modo
@@ -35,9 +35,9 @@ const AboutModule = () => (
         </a>{' '}
         Quod si ita sit, cur opera philosophiae sit danda nescio. Philosophi
         autem in suis lectulis plerumque moriuntur.{' '}
-      </p>
+      </Paragraph>
 
-      <p>
+      <Paragraph>
         Duo Reges: constructio interrete. <b>Ita nemo beato beatior.</b> Eam si
         varietatem diceres, intellegerem, ut etiam non dicente te intellego;
         Teneo, inquit, finem illi videri nihil dolere. <b>Frater et T.</b> A
@@ -46,8 +46,8 @@ const AboutModule = () => (
         corporis, quid est cur pulchritudinem non sequamur? Nonne videmus quanta
         perturbatio rerum omnium consequatur, quanta confusio?{' '}
         <i>Haec igitur Epicuri non probo, inquam.</i>{' '}
-      </p>
-    </Board>
+      </Paragraph>
+    </Card>
   </Dashboard>
 );
 

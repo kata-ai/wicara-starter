@@ -1,8 +1,14 @@
-import styled from 'styled-components';
-import { variables } from '@kata-kit/theme';
+import * as React from 'react';
+import { Heading } from '@wicara/core';
 
-const SidebarSubTitle = styled('h2')`
-  margin-bottom: ${variables.spaces.space2};
-`;
+interface Props {
+  className?: string;
+}
+
+const SidebarSubTitle: React.FC<Props> = ({ children, className }) => (
+  <Heading as="h2" scale="heading2" mt={0} mb="md" className={className}>
+    {children}
+  </Heading>
+);
 
 export default SidebarSubTitle;

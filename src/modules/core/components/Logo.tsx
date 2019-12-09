@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import KataLogo from '~/assets/images/logo.svg';
+import KataLogo from 'assets/images/logo.svg';
 
 const Logo: React.SFC = () => {
   return (

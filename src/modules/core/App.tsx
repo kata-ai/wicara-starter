@@ -6,6 +6,7 @@ import {
   withRouter,
   Redirect
 } from 'react-router-dom';
+import { OutlineButton } from '@wicara/core';
 
 import {
   Wrapper,
@@ -15,11 +16,10 @@ import {
   Sidebar,
   SidebarMain,
   SidebarMainMenu
-} from '@kata-kit/layout';
-import { Robot } from '@kata-kit/loading';
+} from 'components/layout';
+import { Robot } from 'components/loading';
 
 import Logo from './components/Logo';
-import Selector from './components/Selector';
 
 import * as sidebar from './sidebar';
 import HomeSidebar from '../home/sidebar';
@@ -33,7 +33,14 @@ class App extends React.Component<RouteComponentProps> {
 
     return (
       <Wrapper>
-        <Topbar logoContent={<Logo />} leftContent={<Selector />}>
+        <Topbar
+          logoContent={<Logo />}
+          leftContent={
+            <OutlineButton style={{ width: 192 }} icon="arrow-left">
+              Back
+            </OutlineButton>
+          }
+        >
           TopbarRight
         </Topbar>
         <SidebarAndContent hasTop>
@@ -42,7 +49,6 @@ class App extends React.Component<RouteComponentProps> {
               {Object.keys(sidebar.menus).map(menu => (
                 <React.Fragment key={menu}>
                   <SidebarMainMenu
-                    asNavLink
                     exact={sidebar.menus[menu].isExact}
                     to={sidebar.menus[menu].path}
                     icon={sidebar.menus[menu].icon}
@@ -52,11 +58,9 @@ class App extends React.Component<RouteComponentProps> {
                 </React.Fragment>
               ))}
             </SidebarMain>
-            {!this.isSidebarCollapsed() && (
-              <React.Fragment>
-                {currLoc ? this.getSidebarSub(currLoc) : null}
-              </React.Fragment>
-            )}
+            {!this.isSidebarCollapsed() && currLoc
+              ? this.getSidebarSub(currLoc)
+              : null}
           </Sidebar>
           <Content>
             <React.Suspense fallback={<Robot />}>

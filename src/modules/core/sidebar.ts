@@ -1,4 +1,4 @@
-import { SidebarMainMenu } from '~/interfaces/types';
+import { SidebarMainMenu } from 'interfaces/types';
 
 const menus: Record<string, SidebarMainMenu> = {
   first: {
