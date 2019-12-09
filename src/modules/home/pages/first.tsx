@@ -31,7 +31,7 @@ class HomeFirstPage extends React.Component<{}, HomeFirstPageState> {
           </Heading>
         </Box>
         <Box mb="lg" mx="lg">
-          <Paragraph m={0}>
+          <Paragraph>
             Congratulations! You have opened this modal.{' '}
             <a
               href="https://www.youtube.com/watch?v=ctSYCoMF4z4"
