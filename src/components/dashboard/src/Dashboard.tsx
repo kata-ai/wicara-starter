@@ -88,15 +88,16 @@ const DashboardTooltip = styled('i')`
   flex: 0 0 auto;
   align-self: center;
   font-size: 20px;
-  color: #676b6d /* $gray-60 */;
-  margin-left: 0.615384615rem /* $space-1 */;
+  line-height: 1;
+  color: ${colors.gray60};
+  margin-left: ${space.space1}px;
 
   &::before {
     vertical-align: middle;
   }
 
   &:hover {
-    color: black;
+    color: #000;
   }
 `;
 
@@ -244,7 +245,7 @@ export default class Dashboard extends React.Component<DashboardProps> {
                   <Container>
                     <Heading
                       as="h1"
-                      scale="heading1"
+                      scale="heading2"
                       m={0}
                       color="white"
                       data-testid="Dashboard-title"
@@ -309,7 +310,7 @@ export default class Dashboard extends React.Component<DashboardProps> {
               <DashboardHeaderInner>
                 <Heading
                   as="h1"
-                  scale="heading1"
+                  scale="heading2"
                   m={0}
                   data-testid="Dashboard-title"
                 >
